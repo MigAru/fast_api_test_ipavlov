@@ -19,7 +19,7 @@ async def get_items(id, value, limit, offset):
         )
     except ParamsError:
         raise HTTPException(
-            status_code=404,
+            status_code=400,
             detail="limit не может быть = 0 | offset не может быть < 0"
         )
 
