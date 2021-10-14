@@ -1,0 +1,11 @@
+[flake8]
+ignore =
+    W503,
+    F811,
+    E402
+exclude =
+    */migrations/,
+    venv/,
+    env/
+max-complexity = 10
+max-line-length = 119
