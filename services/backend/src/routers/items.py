@@ -13,7 +13,7 @@ router = APIRouter()
     '/items',
     response_model=List[ItemOutSchema],
     responses={404: {"model": HTTPNotFoundError}}
-    )
+)
 async def get_items(
     id: Optional[int] = None,
     value: Optional[str] = None,
@@ -35,6 +35,6 @@ async def create_item(item: ItemInSchema) -> ItemOutSchema:
     '/items',
     response_model=ItemOutSchema,
     responses={404: {"model": HTTPNotFoundError}}
-    )
+)
 async def update_item(item: UpdateItem) -> ItemOutSchema:
     return await crud.update_item(item)
